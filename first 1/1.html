@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <body>
+           
+            <div id="root">fgh</div>
+
+            <script type="text/babel">
+
+    function compIp(props) {
+        return <span className="comp"> <h1>Кто написал {props.fam}</h1> </span>
+    }
+
+    class Komp extends React.Component {
+        render() {
+            return <div className="i"> <h1>Hello from COMPONENT !! {this.props.name}  </h1>  </div>
+        }
+    }
+                // рендеринг элемента
+              ReactDOM.render(
+
+              <div className="mainbox">
+                <compIp fam ="Saitov"/>
+                <Komp name ="Nurlan" />
+                <input type="text" />
+                <p className="mathem">1+2 = {1+2}</p>
+                <h1 className="hone">Bye!</h1>
+                <h2 className="htwo">!!!!</h2>
+                 
+            </div>  ,
+
+           //<h1>Hello React</h1>,  // элемент, который мы хотим создать
+                document.getElementById("root")    // где мы этот элемент хотим создать
+
+              )
+            </script>
+            
+        </body>
+    </head>
+</html>
