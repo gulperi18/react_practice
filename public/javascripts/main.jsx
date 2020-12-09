@@ -3,30 +3,25 @@
     class ContactList extends React.Component {     
         constructor(props) {
             super(props);
-            this.state = {  studlist: [ ]  }      
+            this.state = {  studlist: []  }      
         }
 
-        componentDidMount() {
-            fetch(`/getstlist`)
-                .then(res => res.json())
-                .then(json => this.setState({ studlist: json }));
-        }s
+            componentDidMount() {
+            fetch(`./getstlist`)
+              .then(res => res.json())
+              .then(json => this.setState({ studlist: json }));
+            }
+          
 
 
         render() {
             return( 
-              <div class="contacts">
-              Fghj Gnm <br />
-              Fghj Gnm <br />
-              Fghj Gnm <br />
-              <br />
-              <ul>
+              <div class="contacts"> <br />
            {this.state.studlist.map((stud)=>
             <div key = { stud.id_stud} id={stud.id_stud} >
-                <li id={  stud.id_stud } > { stud.fam + ' ' + stud.name}</li>
+                <p id={  stud.id_stud } > { stud.fam + ' ' + stud.name}</p>
            </div>
            )}
-           </ul>
 
               </div>
             )

@@ -15,13 +15,13 @@ a {
 .smsList {
   border: 1px solid green;
   width: 100%;
-  height: 110px;
+  height:  100%;
   background-color: skyblue;
 }
 .contacts {
   border: 1px solid blue;
   width: 230px;
-  height: 110px;
+  height: 100%;
   background-color: skyblue;
 }
 

@@ -13,9 +13,12 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000,
 })
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/getstlist', function(req, res, next) {
 
   pool.connect((err, client, release) => {
     if (err) {
@@ -27,13 +30,10 @@ router.get('/', function(req, res, next) {
         if (err) {
           return console.error('Error executing query', err.stack)
         }
-        console.log(result.rows);
+        res.send(result.rows);
 
       })
   })
-
-  
-  res.render('index', { title: 'Express' });
 });
 
 
