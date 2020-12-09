@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <body>
+           
+            <div id="root"></div>
+
+            <script type="text/babel">
+
+
+    class ContactList extends React.Component {
+        render() {
+            return( 
+              <div class="contacts">
+              Fghj Gnm <br />
+              Fghj Gnm <br />
+              Fghj Gnm <br />
+              <br />
+              </div>
+            )
+        }
+
+    }
+
+
+    class MessageBox extends React.Component {
+        render() {
+            return( 
+              <div class="smsList">
+              HI Gnm <br />
+              Hi nm Gnm <br />
+              HI Gnm <br />
+              </div>
+            )
+        }
+
+    }
+
+    ReactDOM.render (
+        <div className="mainbox">
+        <ContactList />
+        <MessageBox /> 
+        </div> ,
+
+        document.getElementById("root")
+
+    )
+              
+            </script>
+            
+        </body>
+    </head>
+</html>
